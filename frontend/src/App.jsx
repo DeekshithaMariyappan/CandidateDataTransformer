@@ -39,7 +39,7 @@ function App() {
           <section className="right-panel slide-in">
 
             <div className="panel-content">
-              <CanonicalProfileViewer profile={result.profile} />
+              <CanonicalProfileViewer profile={result.profile} hasConfig={result.has_config} />
               <Dashboard
                 confidence={result.confidence}
                 overallConfidence={result.overall_confidence}

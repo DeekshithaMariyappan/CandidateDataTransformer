@@ -1,4 +1,4 @@
-export default function CanonicalProfileViewer({ profile }) {
+export default function CanonicalProfileViewer({ profile, hasConfig }) {
   if (!profile) return null;
 
   const renderValue = (value) => {
@@ -75,15 +75,17 @@ export default function CanonicalProfileViewer({ profile }) {
         </div>
       </div>
 
-      <div className="card canonical-card" style={{ marginTop: '1.5rem' }}>
-        <h3 style={{ marginBottom: '0.5rem' }}><span className="icon">📄</span> Projected Output JSON</h3>
-        <p className="text-muted" style={{ marginBottom: '1rem', fontSize: '0.9rem' }}>
-          CANONICAL CANDIDATE DATA
-        </p>
-        <div className="json-container">
-          {JSON.stringify(profile, null, 2)}
+      {hasConfig && (
+        <div className="card canonical-card" style={{ marginTop: '1.5rem' }}>
+          <h3 style={{ marginBottom: '0.5rem' }}><span className="icon">📄</span> Projected Output JSON</h3>
+          <p className="text-muted" style={{ marginBottom: '1rem', fontSize: '0.9rem' }}>
+            CANONICAL CANDIDATE DATA
+          </p>
+          <div className="json-container">
+            {JSON.stringify(profile, null, 2)}
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }
