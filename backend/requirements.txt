@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+python-multipart
+pandas
+pdfplumber
+ollama
+pydantic
+phonenumbers
