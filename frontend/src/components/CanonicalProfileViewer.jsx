@@ -47,7 +47,8 @@ export default function CanonicalProfileViewer({ profile, hasConfig }) {
 
   return (
     <>
-      <div className="card canonical-card">
+      {!hasConfig && (
+        <div className="card canonical-card">
         <div className="profile-header">
           <div className="avatar">
             {profile.full_name ? profile.full_name.charAt(0).toUpperCase() : '?'}
@@ -74,9 +75,10 @@ export default function CanonicalProfileViewer({ profile, hasConfig }) {
           })}
         </div>
       </div>
+      )}
 
       {hasConfig && (
-        <div className="card canonical-card" style={{ marginTop: '1.5rem' }}>
+        <div className="card canonical-card">
           <h3 style={{ marginBottom: '0.5rem' }}><span className="icon">📄</span> Projected Output JSON</h3>
           <p className="text-muted" style={{ marginBottom: '1rem', fontSize: '0.9rem' }}>
             CANONICAL CANDIDATE DATA

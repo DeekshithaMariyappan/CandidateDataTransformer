@@ -40,12 +40,14 @@ function App() {
 
             <div className="panel-content">
               <CanonicalProfileViewer profile={result.profile} hasConfig={result.has_config} />
-              <Dashboard
-                confidence={result.confidence}
-                overallConfidence={result.overall_confidence}
-                provenance={result.provenance}
-                conflicts={result.conflicts}
-              />
+              {!result.has_config && (
+                <Dashboard
+                  confidence={result.confidence}
+                  overallConfidence={result.overall_confidence}
+                  provenance={result.provenance}
+                  conflicts={result.conflicts}
+                />
+              )}
 
             </div>
           </section>
