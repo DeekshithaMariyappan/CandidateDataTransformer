@@ -1,2 +1,11 @@
-candidate_id,name,email,phone,current_company,title,location,skills
-1001,Deekshitha M,deekshitha@gmail.com,9876543210,Student,Final Year CSE Student,Bangalore,"ReactJS, NodeJS"
+candidate_id,name,email,phone,current_company,title,location
+1001,Deekshitha M,deekshitha@example.com,9876543210,ABC Technologies,Software Engineer Intern,Bangalore
+1002,Rahul Kumar,rahul.kumar@example.com,8765432109,Infosys,Java Developer,Chennai
+1003,Priya Sharma,priya.sharma@example.com,7654321098,TCS,Frontend Developer,Hyderabad
+1004,Arjun Reddy,arjun.reddy@example.com,9543216780,Wipro,Backend Engineer,Pune
+1005,Sneha Patel,sneha.patel@example.com,9123456780,Accenture,Full Stack Developer,Mumbai
+1006,Vikram Singh,vikram.singh@example.com,9988776655,Cognizant,Data Analyst,Noida
+1007,Ananya Gupta,ananya.gupta@example.com,8899776655,HCL Technologies,Software Developer,Gurgaon
+1008,Karan Mehta,karan.mehta@example.com,7788996655,Capgemini,Cloud Engineer,Bangalore
+1009,Neha Verma,neha.verma@example.com,6677889900,IBM,DevOps Engineer,Hyderabad
+1010,Rohit Jain,rohit.jain@example.com,9871234567,Deloitte,Data Engineer,Chennai
