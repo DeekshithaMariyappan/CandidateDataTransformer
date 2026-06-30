@@ -1,6 +1,6 @@
 # Candidate Data Transformer
 
-A full-stack application that intelligently extracts and merges candidate data from structured sources (CSV) and unstructured sources (PDF Resumes) using Ollama and Llama 3.2.
+An AI full-stack application that intelligently extracts and merges candidate data from structured sources (CSV) and unstructured sources (PDF Resumes) using Ollama and Llama 3.2.
 
 ## Features
 
