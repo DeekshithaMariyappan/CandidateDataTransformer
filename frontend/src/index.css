@@ -65,15 +65,15 @@ h1, h2, h3 {
 
 /* Layout */
 .app-main {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
 }
 
-@media (min-width: 1024px) {
-  .app-main {
-    grid-template-columns: 400px 1fr;
-  }
+.left-panel {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* Cards & Glassmorphism */

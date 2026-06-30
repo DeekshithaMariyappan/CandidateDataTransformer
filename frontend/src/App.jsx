@@ -27,7 +27,6 @@ function App() {
     <div className="app-container">
       <header className="app-header">
         <h1>Candidate Data Transformer</h1>
-        <p className="subtitle">Powered by Ollama + Llama 3.2</p>
       </header>
 
       <main className="app-main">
@@ -38,9 +37,7 @@ function App() {
 
         {result && (
           <section className="right-panel slide-in">
-            <div className="tabs">
-              <div className="tab active">Overview</div>
-            </div>
+
             <div className="panel-content">
               <CanonicalProfileViewer profile={result.profile} />
               <Dashboard
