@@ -3,14 +3,14 @@ export default function CanonicalProfileViewer({ profile }) {
 
   const renderValue = (value) => {
     if (value === null || value === undefined || value === '') return <span className="text-muted">N/A</span>;
-    
+
     if (typeof value === 'string' || typeof value === 'number') {
       return <span>{value}</span>;
     }
-    
+
     if (Array.isArray(value)) {
       if (value.length === 0) return <span className="text-muted">None</span>;
-      
+
       // If array of strings (like skills, emails)
       if (typeof value[0] === 'string' || typeof value[0] === 'number') {
         return (
@@ -21,7 +21,7 @@ export default function CanonicalProfileViewer({ profile }) {
           </div>
         );
       }
-      
+
       // If array of objects (like experience, education)
       return (
         <ul className="timeline-list">
@@ -33,11 +33,11 @@ export default function CanonicalProfileViewer({ profile }) {
         </ul>
       );
     }
-    
+
     if (typeof value === 'object') {
       return <pre className="dynamic-pre">{JSON.stringify(value, null, 2)}</pre>;
     }
-    
+
     return String(value);
   };
 
@@ -62,7 +62,7 @@ export default function CanonicalProfileViewer({ profile }) {
           {Object.entries(profile).map(([key, value]) => {
             // Skip fields rendered in the header or internal fields
             if (key === 'full_name' || key === 'headline') return null;
-            
+
             return (
               <div key={key} className="section">
                 <h3>{formatKey(key)}</h3>
@@ -78,7 +78,7 @@ export default function CanonicalProfileViewer({ profile }) {
       <div className="card canonical-card" style={{ marginTop: '1.5rem' }}>
         <h3 style={{ marginBottom: '0.5rem' }}><span className="icon">📄</span> Projected Output JSON</h3>
         <p className="text-muted" style={{ marginBottom: '1rem', fontSize: '0.9rem' }}>
-          This data exactly matches the structure defined in your projection configuration.
+          CANONICAL CANDIDATE DATA
         </p>
         <div className="json-container">
           {JSON.stringify(profile, null, 2)}
