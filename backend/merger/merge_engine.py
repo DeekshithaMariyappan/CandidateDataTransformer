@@ -11,6 +11,10 @@ class MergeEngine:
     def merge(self, csv_data: Dict[str, Any], resume_data: Dict[str, Any]) -> CandidateProfile:
         profile = CandidateProfile()
         
+        # Candidate ID
+        csv_id = str(csv_data.get("candidate_id", "")) if csv_data.get("candidate_id") else None
+        profile.candidate_id = self.conflict_resolver.resolve("candidate_id", csv_id, None, prefer_source="csv")
+        
         # Merge Emails (Prefer CSV)
         csv_email = csv_data.get("email") or csv_data.get("emails", "")
         resume_emails = resume_data.get("emails", [])

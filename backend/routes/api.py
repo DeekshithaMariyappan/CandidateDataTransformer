@@ -48,6 +48,8 @@ async def upload_files(
         if config_file:
             content = await config_file.read()
             state.config = json.loads(content.decode("utf-8"))
+        else:
+            state.config = None
             
         return {"message": "Files uploaded successfully"}
     except Exception as e:
@@ -101,7 +103,8 @@ async def transform():
             "overall_confidence": profile_dict.get("overall_confidence", 0.0),
             "provenance": [p for p in profile_dict.get("provenance", [])],
             "conflicts": profile_dict.get("conflicts", []),
-            "llm_raw_data": llm_data # Sending back for preview
+            "llm_raw_data": llm_data, # Sending back for preview
+            "has_config": bool(state.config)
         }
         
         state.last_result = result
